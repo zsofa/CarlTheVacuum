@@ -48,9 +48,9 @@ public class Carl {
         this.direction = direction;
     }
 
-    public void cleanTheSpot(int row, int column) {
-        if (getRoom()[row][column] != 0) {
-            getRoom()[row][column] = 2;
+    public void cleanTheSpot(int x, int y) {
+        if (getRoom()[x][y] != 0) {
+            getRoom()[x][y] = 2;
         }
     }
 

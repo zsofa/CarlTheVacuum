@@ -49,6 +49,7 @@ public class Cleaning {
                     turnBack(newDirection,newX,newY,room.getRoomCoordinateSystem());
             }
             newDirection += 2;
+                // try: one turn is 90 degree, change it to 180
 
         }
 

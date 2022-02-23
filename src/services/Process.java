@@ -14,7 +14,7 @@ public class Process {
             cleaning.cleanAll(carl,room);
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Error");
+            System.out.println("Error!");
         }
     }
 }
