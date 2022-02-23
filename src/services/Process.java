@@ -9,7 +9,7 @@ public class Process {
         try {
             DataLoader dataLoader = new DataLoader();
             Room room = dataLoader.exampleRoom();
-            Carl carl = new Carl(room.getRoomCoordinateSystem());
+            Carl carl = new Carl(room.getGrid());
             Cleaning cleaning = new Cleaning();
             cleaning.cleanAll(carl,room);
         } catch (Exception e) {

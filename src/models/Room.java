@@ -4,14 +4,12 @@ public class Room {
 
     private int x;
     private int y;
-    private int[][] roomCoordinateSystem;
-   // private final int[] DIRECTIONS = {0,1,2,3};
-
+    private int[][] grid;
 
     public Room(int x, int y, int[][] roomCoordinateSystem) {
         this.x = x;
         this.y = y;
-        this.roomCoordinateSystem = roomCoordinateSystem;
+        this.grid = roomCoordinateSystem;
     }
 
     public int getX() {
@@ -30,11 +28,11 @@ public class Room {
         this.y = y;
     }
 
-    public int[][] getRoomCoordinateSystem() {
-        return roomCoordinateSystem;
+    public int[][] getGrid() {
+        return grid;
     }
 
-    public void setRoomCoordinateSystem(int[][] roomCoordinateSystem) {
-        this.roomCoordinateSystem = roomCoordinateSystem;
+    public void setGrid(int[][] grid) {
+        this.grid = grid;
     }
 }

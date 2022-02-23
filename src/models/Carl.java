@@ -8,7 +8,6 @@ public class Carl {
     private Set<int[]> visited = new HashSet<>();
     private int[][] room;
     private boolean move;
-    private int direction;
 
     public Carl(int[][] room) {
         this.room = room;
@@ -39,18 +38,17 @@ public class Carl {
     }
 
 
-
-    public int getDirection() {
-        return direction;
-    }
-
-    public void setDirection(int direction) {
-        this.direction = direction;
-    }
-
     public void cleanTheSpot(int x, int y) {
-        if (getRoom()[x][y] != 0) {
+        if (getRoom()[x][y] != 1) {
             getRoom()[x][y] = 2;
+        }
+    }
+
+    public void turnRight(int direction) {
+        if (direction != 3) {
+            direction += 2;
+        } else {
+            direction -=2;
         }
     }
 

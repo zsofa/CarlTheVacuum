@@ -3,8 +3,6 @@ package services;
 import models.Carl;
 import models.Room;
 
-import java.util.Set;
-
 public class Cleaning {
 
     private Carl carl;
@@ -44,11 +42,11 @@ public class Cleaning {
                 }
 
                 if (!carl.getVisited().contains(new int[]{newX,newY})
-                        && carl.isMove(newX, newY, room.getRoomCoordinateSystem())) {
+                        && carl.isMove(newX, newY, room.getGrid())) {
                     findTheWay(newX, newY,newDirection, carl, room);
-                    turnBack(newDirection,newX,newY,room.getRoomCoordinateSystem());
+                    turnBack(newDirection,newX,newY,room.getGrid());
             }
-            newDirection += 2;
+            carl.turnRight(newDirection);
                 // try: one turn is 90 degree, change it to 180
 
         }
@@ -56,11 +54,9 @@ public class Cleaning {
     }
 
     private void turnBack(int direction, int x, int y, int[][] room) {
-        direction++;
-        direction++;
+        carl.turnRight(direction);
         carl.isMove(x,y, room);
-        direction++;
-        direction++;
+        carl.turnRight(direction);
 
     }
 }
